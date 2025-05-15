@@ -1,0 +1,96 @@
+import { BlogPost } from '../components/blog/BlogCard';
+
+const blogData: BlogPost[] = [
+  {
+    id: '1',
+    title: '10 SEO Strategies That Actually Work in 2025',
+    excerpt: 'Learn the latest search engine optimization techniques that are driving real results for businesses this year.',
+    content: 'Long form content would go here...',
+    category: 'SEO',
+    author: {
+      name: 'Alex Johnson',
+      avatar: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    date: 'May 15, 2025',
+    readTime: '8 min read',
+    image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    tags: ['SEO', 'Digital Marketing', 'Content Strategy'],
+  },
+  {
+    id: '2',
+    title: 'How to Create a Social Media Strategy That Converts',
+    excerpt: 'Discover how to build a social media marketing plan that drives engagement and boosts your conversion rates.',
+    content: 'Long form content would go here...',
+    category: 'Social Media',
+    author: {
+      name: 'Maria Rodriguez',
+      avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    date: 'May 10, 2025',
+    readTime: '6 min read',
+    image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    tags: ['Social Media', 'Conversion', 'Marketing Strategy'],
+  },
+  {
+    id: '3',
+    title: 'The Ultimate Guide to Google Ads in 2025',
+    excerpt: 'Everything you need to know about running successful Google Ads campaigns in the current digital landscape.',
+    content: 'Long form content would go here...',
+    category: 'Google Ads',
+    author: {
+      name: 'David Chen',
+      avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    date: 'May 5, 2025',
+    readTime: '10 min read',
+    image: 'https://images.pexels.com/photos/38544/imac-apple-mockup-app-38544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    tags: ['Google Ads', 'PPC', 'Digital Advertising'],
+  },
+  {
+    id: '4',
+    title: '7 Website Design Trends Dominating 2025',
+    excerpt: 'Stay ahead of the curve with these cutting-edge web design trends that are defining the digital experience this year.',
+    content: 'Long form content would go here...',
+    category: 'Web Design',
+    author: {
+      name: 'Sarah Williams',
+      avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    date: 'April 28, 2025',
+    readTime: '7 min read',
+    image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    tags: ['Web Design', 'UX/UI', 'Design Trends'],
+  },
+  {
+    id: '5',
+    title: 'The Power of Email Marketing: Statistics and Strategies',
+    excerpt: 'Learn why email marketing still delivers the highest ROI of any digital channel and how to maximize your results.',
+    content: 'Long form content would go here...',
+    category: 'Email Marketing',
+    author: {
+      name: 'Michael Thompson',
+      avatar: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    date: 'April 20, 2025',
+    readTime: '5 min read',
+    image: 'https://images.pexels.com/photos/4132536/pexels-photo-4132536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    tags: ['Email Marketing', 'Conversions', 'Marketing Automation'],
+  },
+  {
+    id: '6',
+    title: 'Content Marketing Strategies for B2B Companies',
+    excerpt: 'Effective content marketing approaches specifically designed for business-to-business companies looking to generate leads.',
+    content: 'Long form content would go here...',
+    category: 'Content',
+    author: {
+      name: 'Jennifer Lee',
+      avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    date: 'April 15, 2025',
+    readTime: '8 min read',
+    image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    tags: ['Content Marketing', 'B2B', 'Lead Generation'],
+  },
+];
+
+export default blogData;
