@@ -24,7 +24,7 @@ const ContactInfo = () => {
             <h4 className="font-medium text-gray-900 mb-1">Phone</h4>
             <p className="text-gray-600">
               <a href="tel:+123456789" className="hover:text-primary-600 transition-colors">
-                (+91) 9341436937
+                (123) 456-7890
               </a>
               <br />
               <span className="text-sm text-gray-500">Mon-Fri from 9am to 6pm</span>
