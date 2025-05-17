@@ -6,7 +6,14 @@ import CtaSection from '../components/home/CtaSection';
 
 const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState(false);
-  
+
+  // Custom INR prices based on common SaaS tiers for Indian market
+  const inrPrices = [
+    { monthly: 799, annual: 7670 },    // Basic
+    { monthly: 1999, annual: 19200 },  // Standard
+    { monthly: 3999, annual: 38400 },  // Premium
+  ];
+
   return (
     <div>
       <div className="bg-gradient-blue py-32 px-4">
@@ -51,17 +58,18 @@ const Pricing = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingData.map((tier, index) => (
-              <PricingCard
-                key={index}
-                tier={{
-                  ...tier,
-                  price: isAnnual 
-                    ? `$${Math.round(parseInt(tier.price.replace('$', '')) * 0.8 * 12)}`
-                    : tier.price,
-                }}
-              />
-            ))}
+            {pricingData.map((tier, index) => {
+              const price = isAnnual ? `₹${inrPrices[index].annual.toLocaleString()}` : `₹${inrPrices[index].monthly.toLocaleString()}`;
+              return (
+                <PricingCard
+                  key={index}
+                  tier={{
+                    ...tier,
+                    price,
+                  }}
+                />
+              );
+            })}
           </div>
           
           <div className="mt-16 bg-white p-8 rounded-xl shadow-md">
