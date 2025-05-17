@@ -91,7 +91,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-              placeholder="John Doe"
+              placeholder="HivixDigital"
             />
           </div>
 
@@ -107,7 +107,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-              placeholder="john@example.com"
+              placeholder="info@hivixdigital.com"
             />
           </div>
 
@@ -122,7 +122,7 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-              placeholder="(123) 456-7890"
+              placeholder="(+91)9664480363"
             />
           </div>
 
@@ -139,12 +139,21 @@ const ContactForm = () => {
             >
               <option value="">Select a service</option>
               <option value="SEO">Search Engine Optimization</option>
-              <option value="SocialMedia">Social Media Marketing</option>
-              <option value="GoogleAds">Google Ads Management</option>
-              <option value="WebDesign">Website Design</option>
-              <option value="Content">Content Marketing</option>
-              <option value="Email">Email Marketing</option>
-              <option value="Other">Other</option>
+              <option value="Logo">Logo Design</option>
+<option value="SocialMedia">Instagram & Facebook Management</option>
+<option value="Graphics">Graphics Design</option>
+<option value="Content">Content Writing & Marketing</option>
+<option value="MetaAds">Meta Ads (Facebook & Instagram Ads)</option>
+<option value="GoogleAds">Google Ads Management</option>
+<option value="SEO">Search Engine Optimization</option>
+<option value="Blog">Blog Writing & Management</option>
+<option value="WebDesign">Website Design & Development</option>
+<option value="AppDev">Mobile App UI Design & Development</option>
+<option value="Custom">Custom Marketing & Branding Solutions</option>
+<option value="Other">Other</option>
+
+
+
             </select>
           </div>
         </div>

@@ -5,39 +5,47 @@ import SectionTitle from '../common/SectionTitle';
 const testimonials = [
   {
     id: 1,
-    content: "Working with DigitalEdge transformed our online presence. Their SEO strategies helped us rank on the first page for our key terms within 3 months.",
-    author: "Sarah Johnson",
-    position: "Marketing Director",
-    company: "TechSolutions Inc.",
+    content:
+      "Working with Hivix Digital has been a game-changer. Our SEO rankings skyrocketed, and we started seeing consistent organic traffic within just a few months.",
+    author: "Vikash Singh",
+    position: "Founder & CEO",
+    company: "Hivix Digital",
     rating: 5,
-    image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image:
+      "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 2,
-    content: "The social media campaigns they developed for us increased our engagement by 150% and led to a 35% boost in direct sales from social channels.",
-    author: "David Chen",
-    position: "CEO",
-    company: "Innovative Startup",
+    content:
+      "Hivix completely revamped our social media strategy. Engagement has gone through the roof, and our audience feels more connected than ever.",
+    author: "Priya Mehta",
+    position: "Marketing Manager",
+    company: "Kraftify India",
     rating: 5,
-    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image:
+      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 3,
-    content: "Their team redesigned our website and implemented a content strategy that doubled our conversion rate within just six months.",
-    author: "Emily Rodriguez",
-    position: "E-commerce Manager",
-    company: "StyleBoutique",
+    content:
+      "Their content and email marketing helped us double our lead conversion rate in less than 6 months. Truly impressed with the quality and strategy.",
+    author: "Rohan Desai",
+    position: "Growth Lead",
+    company: "ZentraTech",
     rating: 4,
-    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image:
+      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 4,
-    content: "The Google Ads campaign DigitalEdge created generated a 400% ROI in the first quarter. Their data-driven approach really delivers results.",
-    author: "Michael Thompson",
-    position: "Sales Director",
-    company: "Global Solutions",
+    content:
+      "The Google Ads campaigns they ran delivered an exceptional ROI. Their targeting and reporting are on point. Highly recommended!",
+    author: "Ananya Sharma",
+    position: "Head of Sales",
+    company: "NeoVibe Solutions",
     rating: 5,
-    image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image:
+      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
 
@@ -57,7 +65,7 @@ const TestimonialsSection = () => {
       <div className="container">
         <SectionTitle
           title="What Our Clients Say"
-          subtitle="Don't just take our word for it. Here's what our clients have to say about our services."
+          subtitle="Hear directly from our clients about the impact Hivix Digital has had on their growth."
           center
         />
 

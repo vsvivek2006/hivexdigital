@@ -36,10 +36,10 @@ const HeroSection = () => {
       <div className="container relative z-20">
         <div className="max-w-3xl mx-auto text-center text-white">
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white animate-fade-in">
-            Grow Your Business with Expert Digital Marketing
+            Elevate Your Brand with Hivix Digital Marketing
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 mb-10 animate-slide-up">
-            Transform your online presence with data-driven strategies that deliver measurable results
+            Empowering your business with innovative, data-driven marketing strategies that deliver real growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -57,7 +57,7 @@ const HeroSection = () => {
               href="/services"
               className="border-white text-white hover:bg-white/10"
             >
-              View Our Services
+              Explore Our Services
             </Button>
           </div>
         </div>

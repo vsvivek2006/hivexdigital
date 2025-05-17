@@ -19,9 +19,9 @@ const Portfolio = () => {
     <div>
       <div className="bg-gradient-blue py-32 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">Our Portfolio</h1>
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">Hivix Digital Portfolio</h1>
           <p className="text-white/90 text-xl max-w-3xl mx-auto">
-            Explore our case studies and success stories
+            Discover how Hivix Digital has empowered businesses with tailored digital marketing solutions and innovative strategies.
           </p>
         </div>
       </div>
@@ -30,7 +30,7 @@ const Portfolio = () => {
         <div className="container">
           <SectionTitle
             title="Case Studies"
-            subtitle="Browse our recent projects and discover how we've helped businesses achieve their marketing goals."
+            subtitle="Explore our recent projects to see how we’ve delivered measurable results for our clients."
             center
           />
           

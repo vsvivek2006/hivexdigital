@@ -12,7 +12,7 @@ export type BlogPost = {
     name: string;
     avatar: string;
   };
-  date: string;
+  date: string;  // ISO string preferred
   readTime: string;
   image: string;
   tags: string[];
@@ -21,6 +21,11 @@ export type BlogPost = {
 type BlogCardProps = {
   post: BlogPost;
   featured?: boolean;
+};
+
+const formatDate = (dateStr: string) => {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
 };
 
 const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false }) => {
@@ -32,6 +37,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false }) => {
             <img
               src={post.image}
               alt={post.title}
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
           </div>
@@ -51,15 +57,16 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false }) => {
                 <img
                   src={post.author.avatar}
                   alt={post.author.name}
+                  loading="lazy"
                   className="w-10 h-10 rounded-full mr-3 object-cover"
                 />
                 <div>
                   <p className="font-medium text-sm">{post.author.name}</p>
-                  <p className="text-gray-500 text-xs">{post.date}</p>
+                  <p className="text-gray-500 text-xs">{formatDate(post.date)}</p>
                 </div>
               </div>
-              <div className="flex items-center text-gray-500 text-sm">
-                <Clock size={14} className="mr-1" />
+              <div className="flex items-center text-gray-500 text-sm" aria-label={`Reading time ${post.readTime}`}>
+                <Clock size={14} className="mr-1" aria-hidden="true" />
                 <span>{post.readTime}</span>
               </div>
             </div>
@@ -75,6 +82,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false }) => {
         <img
           src={post.image}
           alt={post.title}
+          loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute top-4 left-4">
@@ -94,14 +102,15 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false }) => {
             <img
               src={post.author.avatar}
               alt={post.author.name}
+              loading="lazy"
               className="w-8 h-8 rounded-full mr-2 object-cover"
             />
             <div>
               <p className="font-medium text-sm">{post.author.name}</p>
             </div>
           </div>
-          <div className="flex items-center text-gray-500 text-sm">
-            <Clock size={14} className="mr-1" />
+          <div className="flex items-center text-gray-500 text-sm" aria-label={`Reading time ${post.readTime}`}>
+            <Clock size={14} className="mr-1" aria-hidden="true" />
             <span>{post.readTime}</span>
           </div>
         </div>

@@ -6,107 +6,148 @@ import {
   Edit3, 
   Mail, 
   PieChart, 
-  Smartphone
-} from 'lucide-react';
+  Smartphone,
+  PenTool,
+  Monitor,
+  Phone,
+  Layers,
+  Zap,
+} from 'lucide-react'; // Added some icons to match services
+
 import ServiceCard from '../components/services/ServiceCard';
 import SectionTitle from '../components/common/SectionTitle';
 import CtaSection from '../components/home/CtaSection';
 
 const services = [
   {
-    icon: <Search size={24} />,
-    title: 'Search Engine Optimization',
-    description: 'Improve your visibility in search results and drive organic traffic to your website.',
+    icon: <PenTool size={24} />,
+    title: 'Logo Design',
+    description: 'Create a unique and memorable logo to represent your brand identity.',
     features: [
-      'Keyword research and strategy',
-      'On-page and off-page optimization',
-      'Technical SEO audits',
-      'Content optimization',
-      'Local SEO for businesses',
+      'Custom logo concepts',
+      'Vector design',
+      'Multiple revisions',
+      'Brand guidelines',
     ],
   },
   {
     icon: <Share2 size={24} />,
-    title: 'Social Media Marketing',
-    description: 'Build brand awareness and engage with your audience through effective social campaigns.',
+    title: 'Instagram & Facebook Management',
+    description: 'Grow your social media presence with expert account management and content strategy.',
     features: [
-      'Social media strategy development',
-      'Content creation and curation',
-      'Community management',
-      'Paid social advertising',
-      'Performance analytics and reporting',
+      'Content creation & scheduling',
+      'Community engagement',
+      'Follower growth strategies',
+      'Performance analysis',
+    ],
+  },
+  {
+    icon: <Layers size={24} />,
+    title: 'Graphics Design',
+    description: 'Design visually appealing graphics for marketing materials and social media.',
+    features: [
+      'Social media graphics',
+      'Brochures and flyers',
+      'Banners and posters',
+      'Custom illustrations',
+    ],
+  },
+  {
+    icon: <Edit3 size={24} />,
+    title: 'Content Writing & Marketing',
+    description: 'Engage your audience with high-quality content tailored for your brand.',
+    features: [
+      'Blog posts & articles',
+      'SEO-optimized content',
+      'Email newsletters',
+      'Content promotion',
+    ],
+  },
+  {
+    icon: <Zap size={24} />,
+    title: 'Meta Ads (Facebook & Instagram Ads)',
+    description: 'Drive targeted traffic and sales with optimized Meta advertising campaigns.',
+    features: [
+      'Ad campaign setup',
+      'Audience targeting',
+      'Creative ad design',
+      'Performance tracking & optimization',
     ],
   },
   {
     icon: <BarChart2 size={24} />,
     title: 'Google Ads Management',
-    description: 'Drive targeted traffic to your website with optimized pay-per-click advertising campaigns.',
+    description: 'Maximize ROI with expertly managed Google Ads campaigns.',
     features: [
-      'Keyword research and selection',
-      'Ad copy creation and optimization',
-      'Landing page optimization',
-      'Bid management and budget allocation',
-      'Conversion tracking and ROI analysis',
+      'Keyword research',
+      'Ad copywriting',
+      'Bid management',
+      'Conversion tracking',
     ],
   },
   {
-    icon: <Globe size={24} />,
-    title: 'Website Design & Development',
-    description: 'Create a stunning, responsive website that converts visitors into customers.',
+    icon: <Search size={24} />,
+    title: 'Search Engine Optimization',
+    description: 'Improve your search rankings and drive organic traffic to your site.',
     features: [
-      'Custom website design',
-      'Mobile-responsive development',
-      'UX/UI optimization',
-      'E-commerce functionality',
-      'Website maintenance and support',
+      'On-page & off-page SEO',
+      'Technical audits',
+      'Local SEO strategies',
+      'Content optimization',
     ],
   },
   {
     icon: <Edit3 size={24} />,
-    title: 'Content Marketing',
-    description: 'Engage your audience with compelling, SEO-optimized content that drives results.',
+    title: 'Blog Writing & Management',
+    description: 'Consistent and engaging blog content to build your authority and audience.',
     features: [
-      'Content strategy development',
-      'Blog post creation',
-      'Whitepapers and ebooks',
-      'Infographics and visual content',
-      'Content distribution and promotion',
+      'Topic research',
+      'SEO-friendly articles',
+      'Editorial calendar',
+      'Performance analysis',
     ],
   },
   {
-    icon: <Mail size={24} />,
-    title: 'Email Marketing',
-    description: 'Nurture leads and boost sales with targeted email marketing campaigns.',
+    icon: <Monitor size={24} />,
+    title: 'Website Design & Development',
+    description: 'Create professional, responsive websites tailored to your business needs.',
     features: [
-      'Email strategy development',
-      'Newsletter design and creation',
-      'Automated email sequences',
-      'List segmentation and management',
-      'A/B testing and optimization',
+      'Custom web design',
+      'Responsive layouts',
+      'E-commerce integration',
+      'Maintenance & support',
     ],
   },
   {
-    icon: <PieChart size={24} />,
-    title: 'Analytics & Reporting',
-    description: 'Gain valuable insights into your marketing performance with detailed analytics.',
+    icon: <Phone size={24} />,
+    title: 'Mobile App UI Design & Development',
+    description: 'Design and develop user-friendly mobile applications for Android and iOS.',
     features: [
-      'Custom dashboard setup',
-      'Traffic and conversion analysis',
-      'Customer journey mapping',
-      'ROI calculation and reporting',
-      'Regular performance reviews',
+      'UI/UX design',
+      'Cross-platform development',
+      'App store deployment',
+      'Post-launch support',
     ],
   },
   {
-    icon: <Smartphone size={24} />,
-    title: 'Mobile Marketing',
-    description: 'Reach customers on their mobile devices with targeted marketing strategies.',
+    icon: <Zap size={24} />,
+    title: 'Custom Marketing & Branding Solutions',
+    description: 'Tailored marketing strategies designed to fit your unique business goals.',
     features: [
-      'Mobile app marketing',
-      'SMS marketing campaigns',
-      'Mobile-first content strategy',
-      'Location-based marketing',
-      'App store optimization',
+      'Brand strategy development',
+      'Marketing plan creation',
+      'Creative campaign execution',
+      'Performance monitoring',
+    ],
+  },
+  {
+    icon: <Layers size={24} />,
+    title: 'Other',
+    description: 'Have specific needs? We offer customizable solutions for all your marketing challenges.',
+    features: [
+      'Consultation & planning',
+      'Flexible service packages',
+      'Dedicated support',
     ],
   },
 ];
@@ -118,7 +159,7 @@ const Services = () => {
         <div className="container mx-auto text-center">
           <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
           <p className="text-white/90 text-xl max-w-3xl mx-auto">
-            Comprehensive digital marketing solutions to help your business grow online
+            Comprehensive digital marketing and creative solutions tailored for your business.
           </p>
         </div>
       </div>
@@ -126,8 +167,8 @@ const Services = () => {
       <section className="section bg-gray-50">
         <div className="container">
           <SectionTitle
-            title="Digital Marketing Services"
-            subtitle="We offer a full range of digital marketing services to help your business reach its goals."
+            title="What We Offer"
+            subtitle="Explore our full range of services designed to elevate your brand and grow your business."
             center
           />
           

@@ -21,11 +21,10 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-6">
               <Zap size={24} className="text-primary-400" />
-              <span className="font-display text-xl font-semibold text-white">DigitalEdge</span>
+              <span className="font-display text-xl font-semibold text-white">Hivix Digital</span>
             </Link>
             <p className="mb-6">
-              We help businesses grow through strategic digital marketing solutions
-              tailored to meet your unique goals.
+              At Hivix Digital, we provide result-oriented digital marketing solutions designed for Indian businesses. Our goal is to help you grow online with strategies that actually work.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -152,18 +151,18 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-primary-400 mt-1 flex-shrink-0" />
-                <span>123 Marketing Street, Digital City, 10001</span>
+                <span>Hawa Sadak Rd, Ramnagar Extension, Civil Lines, Jaipur, Rajasthan 302019</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-primary-400 flex-shrink-0" />
-                <a href="tel:+123456789" className="hover:text-primary-400 transition-colors">
-                  (123) 456-7890
+                <a href="tel:+919664480363" className="hover:text-primary-400 transition-colors">
+                  +91 96644 80363
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-primary-400 flex-shrink-0" />
-                <a href="mailto:info@digitaledge.com" className="hover:text-primary-400 transition-colors">
-                  info@digitaledge.com
+                <a href="mailto:info@hivixdigital.com" className="hover:text-primary-400 transition-colors">
+                  info@hivixdigital.com
                 </a>
               </li>
             </ul>
@@ -173,7 +172,7 @@ const Footer = () => {
         <hr className="border-gray-800 my-10" />
         
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {currentYear} DigitalEdge. All rights reserved.</p>
+          <p>&copy; {currentYear} Hivix Digital. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
             <Link to="/privacy-policy" className="hover:text-primary-400 transition-colors text-sm">
               Privacy Policy

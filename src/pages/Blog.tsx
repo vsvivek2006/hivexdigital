@@ -24,9 +24,9 @@ const Blog = () => {
     <div>
       <div className="bg-gradient-blue py-32 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">Our Blog</h1>
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">Hivix Digital Blog</h1>
           <p className="text-white/90 text-xl max-w-3xl mx-auto">
-            Insights, tips, and strategies to help your business succeed online
+            Explore the latest digital marketing insights, tips, and strategies from Hivix Digital — empowering businesses to thrive online since 2025.
           </p>
         </div>
       </div>
@@ -39,7 +39,7 @@ const Blog = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Search articles..."
+                    placeholder="Search Hivix Digital articles..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full md:w-80 pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
@@ -74,8 +74,8 @@ const Blog = () => {
               </div>
               
               <SectionTitle
-                title="Latest Articles"
-                subtitle="Explore our most recent insights and tips"
+                title="Latest from Hivix Digital"
+                subtitle="Stay ahead with our expert digital marketing knowledge and case studies"
               />
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -88,7 +88,7 @@ const Blog = () => {
             <div className="text-center py-12">
               <h3 className="text-2xl font-semibold mb-4">No articles found</h3>
               <p className="text-gray-600">
-                Try adjusting your search or filter to find what you're looking for.
+                Try adjusting your search or filter to discover Hivix Digital’s latest content.
               </p>
             </div>
           )}

@@ -23,7 +23,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when clicking a link
   const closeMenu = () => {
     if (isOpen) setIsOpen(false);
   };
@@ -49,7 +48,7 @@ const Navbar = () => {
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}
           >
-            DigitalEdge
+            Hivix Digital {/* 🔁 CHANGED */}
           </span>
         </Link>
 

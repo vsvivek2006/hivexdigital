@@ -2,34 +2,29 @@ import SectionTitle from '../common/SectionTitle';
 
 const milestones = [
   {
-    year: 2015,
-    title: 'Company Founded',
-    description: 'DigitalEdge was founded with a vision to provide affordable, results-driven digital marketing solutions to small businesses.',
+    date: 'January 2025',
+    title: 'Idea & Planning',
+    description: 'Conceptualized Hivix Digital with a mission to revolutionize digital marketing through innovative, data-driven strategies.',
   },
   {
-    year: 2017,
-    title: 'First Major Client',
-    description: 'Secured our first enterprise client and expanded our team to include specialists in SEO, PPC, and social media marketing.',
+    date: 'February 2025',
+    title: 'Market Research & Team Formation',
+    description: 'Conducted thorough market research and started assembling a skilled team of marketing professionals.',
   },
   {
-    year: 2018,
-    title: 'Industry Recognition',
-    description: 'Won "Best Digital Marketing Agency" at the Regional Business Awards and recognized for outstanding campaign results.',
+    date: 'March 2025',
+    title: 'Service Development',
+    description: 'Developed core service offerings including SEO, content marketing, social media management, and paid advertising.',
   },
   {
-    year: 2020,
-    title: 'Global Expansion',
-    description: 'Expanded our services to international clients and introduced new service offerings including content marketing and email automation.',
+    date: 'April 2025',
+    title: 'Branding & Website Launch',
+    description: 'Created the Hivix Digital brand identity and launched the official website to showcase services and expertise.',
   },
   {
-    year: 2022,
-    title: 'Advanced Analytics Division',
-    description: 'Launched our advanced analytics division to provide clients with deeper insights and data-driven strategies.',
-  },
-  {
-    year: 2024,
-    title: 'AI Integration',
-    description: 'Pioneered the integration of AI technology into our marketing strategies, setting new industry standards for performance.',
+    date: 'May 2025',
+    title: 'Official Launch & First Client Projects',
+    description: 'Launched Hivix Digital officially and secured first client projects focusing on delivering measurable ROI.',
   },
 ];
 
@@ -39,7 +34,7 @@ const TimelineSection = () => {
       <div className="container">
         <SectionTitle
           title="Our Journey"
-          subtitle="From humble beginnings to industry leadership, we've been helping businesses grow for over a decade."
+          subtitle="From concept to launch, here’s how Hivix Digital started its journey in early 2025."
           center
         />
 
@@ -56,7 +51,7 @@ const TimelineSection = () => {
                   <div className="w-1/2 px-8">
                     <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                       <span className={`inline-block text-xl font-bold py-1 px-3 rounded-full mb-2 ${index % 2 === 0 ? 'bg-primary-100 text-primary-700' : 'bg-secondary-100 text-secondary-700'}`}>
-                        {milestone.year}
+                        {milestone.date}
                       </span>
                       <h3 className="text-xl font-semibold mb-2">{milestone.title}</h3>
                       <p className="text-gray-600">{milestone.description}</p>

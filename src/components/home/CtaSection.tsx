@@ -33,9 +33,11 @@ const CtaSection = () => {
       
       <div className="container relative z-20">
         <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Elevate Your Brand with Hivix Digital?
+          </h2>
           <p className="text-xl text-gray-100 mb-8">
-            Get in touch today for a free consultation and discover how our digital marketing services can help you achieve your business goals.
+            Connect with us today for a free consultation and see how our expert digital marketing strategies can drive your business forward.
           </p>
           <Button 
             variant="accent" 
@@ -43,7 +45,7 @@ const CtaSection = () => {
             href="/contact"
             className="group"
           >
-            Get Free Consultation
+            Get Your Free Consultation
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
           </Button>
         </div>

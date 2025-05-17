@@ -11,9 +11,10 @@ const ContactInfo = () => {
           <div>
             <h4 className="font-medium text-gray-900 mb-1">Our Office</h4>
             <p className="text-gray-600">
-              123 Marketing Street<br />
-              Digital City, 10001<br />
-              United States
+            Hawa Sadak Rd, Ramnagar Extension<br />
+            Civil Lines, Jaipur, Rajasthan 302019<br />
+             India, 
+           
             </p>
           </div>
         </div>
@@ -24,7 +25,7 @@ const ContactInfo = () => {
             <h4 className="font-medium text-gray-900 mb-1">Phone</h4>
             <p className="text-gray-600">
               <a href="tel:+123456789" className="hover:text-primary-600 transition-colors">
-                (123) 456-7890
+                (+91)9664480363
               </a>
               <br />
               <span className="text-sm text-gray-500">Mon-Fri from 9am to 6pm</span>
@@ -38,7 +39,7 @@ const ContactInfo = () => {
             <h4 className="font-medium text-gray-900 mb-1">Email</h4>
             <p className="text-gray-600">
               <a href="mailto:info@digitaledge.com" className="hover:text-primary-600 transition-colors">
-                info@digitaledge.com
+                info@Hivixdigital.com
               </a>
               <br />
               <span className="text-sm text-gray-500">We'll respond as soon as possible</span>

@@ -6,9 +6,9 @@ const Contact = () => {
     <div>
       <div className="bg-gradient-blue py-32 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">Contact Hivix Digital</h1>
           <p className="text-white/90 text-xl max-w-3xl mx-auto">
-            Get in touch with our team to discuss how we can help your business grow
+            Reach out to our expert team at Hivix Digital. Let's work together to boost your brand’s digital presence and grow your business.
           </p>
         </div>
       </div>
