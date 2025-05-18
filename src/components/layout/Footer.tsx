@@ -19,13 +19,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-6">
-              <Zap size={24} className="text-primary-400" />
-              <span className="font-display text-xl font-semibold text-white">Hivix Digital</span>
-            </Link>
-            <p className="mb-6">
-              At Hivix Digital, we provide result-oriented digital marketing solutions designed for Indian businesses. Our goal is to help you grow online with strategies that actually work.
-            </p>
+            <Link to="/" className="mb-6 inline-block">
+  <img 
+    src="/PNGlogo.png" 
+    alt="Company Logo" 
+    className="h-16 w-auto"
+  />
+</Link>
             <div className="flex space-x-4">
               <a 
                 href="https://facebook.com" 
