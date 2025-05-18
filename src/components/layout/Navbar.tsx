@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { MenuIcon, X, Zap } from 'lucide-react';
+import { MenuIcon, X,  } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,20 +37,14 @@ const Navbar = () => {
     >
       <div className="container flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <Zap 
-            size={28} 
-            className={`transition-colors duration-300 ${
-              isScrolled ? 'text-primary-600' : 'text-white'
-            }`} 
-          />
-          <span 
-            className={`font-display text-xl font-semibold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}
-          >
-            Hivix Digital {/* 🔁 CHANGED */}
-          </span>
-        </Link>
+  <img
+    src="/PNGlogo.png"
+    alt="Logo"
+    className={`h-12 w-auto filter invert brightness-200 transition-all duration-300   ${
+      isScrolled ? '' : 'invert'
+    }`}
+  />
+</Link>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
