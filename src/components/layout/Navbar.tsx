@@ -40,7 +40,7 @@ const Navbar = () => {
   <img
     src="/PNGlogo.png"
     alt="Logo"
-    className={`h-12 w-auto filter invert brightness-200 transition-all duration-300   ${
+    className={`h-16 w-auto filter brightness-200 transition-all duration-300   ${
       isScrolled ? '' : 'invert'
     }`}
   />
