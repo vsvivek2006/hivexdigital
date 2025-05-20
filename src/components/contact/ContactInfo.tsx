@@ -39,7 +39,7 @@ const ContactInfo = () => {
             <h4 className="font-medium text-gray-900 mb-1">Email</h4>
             <p className="text-gray-600">
               <a href="mailto:info@digitaledge.com" className="hover:text-primary-600 transition-colors">
-                info@Hivixdigital.com
+                Hivixdigital@gmail.com
               </a>
               <br />
               <span className="text-sm text-gray-500">We'll respond as soon as possible</span>
@@ -64,7 +64,7 @@ const ContactInfo = () => {
         <h4 className="font-medium text-gray-900 mb-4">Connect With Us</h4>
         <div className="flex space-x-4">
           <a 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/profile.php?id=61576329844755" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary-100 hover:text-primary-600 transition-colors"

@@ -137,19 +137,22 @@ const ContactForm = () => {
               onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-white"
             >
-              <option value="">Select a service</option>
-              <option value="SEO">Search Engine Optimization</option>
-              <option value="Logo">Logo Design</option>
+<option value="">Select a service</option>
+<option value="SEO">Search Engine Optimization</option>
+<option value="Logo">Logo Design</option>
 <option value="SocialMedia">Instagram & Facebook Management</option>
 <option value="Graphics">Graphics Design</option>
 <option value="Content">Content Writing & Marketing</option>
 <option value="MetaAds">Meta Ads (Facebook & Instagram Ads)</option>
 <option value="GoogleAds">Google Ads Management</option>
-<option value="SEO">Search Engine Optimization</option>
 <option value="Blog">Blog Writing & Management</option>
 <option value="WebDesign">Website Design & Development</option>
 <option value="AppDev">Mobile App UI Design & Development</option>
 <option value="Custom">Custom Marketing & Branding Solutions</option>
+<option value="VideoEditing">Video Editing</option>
+<option value="WeddingInvitation">Wedding Invitation Design</option>
+<option value="WeddingIllustration">Wedding Illustration</option>
+<option value="WeddingCard">Wedding Card Design</option>
 <option value="Other">Other</option>
 
 

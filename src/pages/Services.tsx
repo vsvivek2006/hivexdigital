@@ -12,7 +12,11 @@ import {
   Phone,
   Layers,
   Zap,
-} from 'lucide-react'; // Added some icons to match services
+  Film, // for Video Editing
+  Gift, // for Wedding Invitation
+  Image as ImageIcon, // for Wedding Illustration
+  Heart, // for Wedding Card
+} from 'lucide-react';
 
 import ServiceCard from '../components/services/ServiceCard';
 import SectionTitle from '../components/common/SectionTitle';
@@ -141,6 +145,50 @@ const services = [
     ],
   },
   {
+    icon: <Film size={24} />,
+    title: 'Video Editing',
+    description: 'Professional video editing services to bring your vision to life.',
+    features: [
+      'Reels & promos',
+      'Corporate videos',
+      'Social media content',
+      'Color grading & effects',
+    ],
+  },
+  {
+    icon: <Gift size={24} />,
+    title: 'Wedding Invitation Design',
+    description: 'Design unique and elegant wedding invitations that reflect your story.',
+    features: [
+      'Custom themes & styles',
+      'Digital & print-ready formats',
+      'Save-the-date cards',
+      'Creative typography & layout',
+    ],
+  },
+  {
+    icon: <ImageIcon size={24} />,
+    title: 'Wedding Illustration',
+    description: 'Capture your special moments through personalized illustrations.',
+    features: [
+      'Couple portraits',
+      'Storyboard-style invites',
+      'Hand-drawn artwork',
+      'Custom characters & scenes',
+    ],
+  },
+  {
+    icon: <Heart size={24} />,
+    title: 'Wedding Card Design',
+    description: 'Stunning wedding card designs to make your announcement truly special.',
+    features: [
+      'Modern & traditional styles',
+      'Custom calligraphy',
+      'Multiple revision options',
+      'Print-ready & digital formats',
+    ],
+  },
+  {
     icon: <Layers size={24} />,
     title: 'Other',
     description: 'Have specific needs? We offer customizable solutions for all your marketing challenges.',
@@ -163,7 +211,7 @@ const Services = () => {
           </p>
         </div>
       </div>
-      
+
       <section className="section bg-gray-50">
         <div className="container">
           <SectionTitle
@@ -171,7 +219,6 @@ const Services = () => {
             subtitle="Explore our full range of services designed to elevate your brand and grow your business."
             center
           />
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <ServiceCard
@@ -185,7 +232,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-      
+
       <CtaSection />
     </div>
   );

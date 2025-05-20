@@ -9,9 +9,9 @@ const Pricing = () => {
 
   // Custom INR prices based on common SaaS tiers for Indian market
   const inrPrices = [
-    { monthly: 799, annual: 7670 },    // Basic
-    { monthly: 1999, annual: 19200 },  // Standard
-    { monthly: 3999, annual: 38400 },  // Premium
+    { monthly: 7999, annual: 6770 },    // Basic
+    { monthly: 19999, annual: 15200 },  // Standard
+    { monthly: 39999, annual: 30400 },  // Premium
   ];
 
   return (
