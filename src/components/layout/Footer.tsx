@@ -20,15 +20,15 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="mb-6 inline-block">
-  <img 
-    src="/PNGlogowhitee.png" 
-    alt="Company Logo" 
-    className="h-16 w-auto"
-  />
-</Link>
+              <img 
+                src="/PNGlogowhitee.png" 
+                alt="Company Logo" 
+                className="h-16 w-auto"
+              />
+            </Link>
             <div className="flex space-x-4">
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/people/Hivix-Digital-Solution-Pvt-Ltd/61576329844755/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary-400 transition-colors"
@@ -37,7 +37,7 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/HivixDigital" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary-400 transition-colors"
@@ -46,7 +46,7 @@ const Footer = () => {
                 <Twitter size={20} />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/hivixdigital/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary-400 transition-colors"
