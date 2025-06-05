@@ -17,15 +17,15 @@ const Footer = () => {
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
-          <div>
+          <div className="text-center md:text-left">
             <Link to="/" className="mb-6 inline-block">
-              <img 
-                src="/PNGlogowhitee.png" 
-                alt="Company Logo" 
+              <img
+                src="/PNGlogowhitee.png"
+                alt="Company Logo"
                 className="h-16 w-auto"
               />
             </Link>
-            <div className="flex space-x-4">
+            <div className="flex justify-center md:justify-start space-x-4">
               <a 
                 href="https://www.facebook.com/people/Hivix-Digital-Solution-Pvt-Ltd/61576329844755/" 
                 target="_blank" 
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h5 className="text-white font-semibold text-lg mb-6">Quick Links</h5>
             <ul className="space-y-3">
               <li>
@@ -108,7 +108,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="text-center md:text-left">
             <h5 className="text-white font-semibold text-lg mb-6">Our Services</h5>
             <ul className="space-y-3">
               <li>
@@ -145,7 +145,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-center md:text-left">
             <h5 className="text-white font-semibold text-lg mb-6">Contact Us</h5>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -170,7 +170,7 @@ const Footer = () => {
 
         <hr className="border-gray-800 my-10" />
         
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center text-center gap-4">
           <p>&copy; {currentYear} Hivix Digital. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
             <Link to="/privacy-policy" className="hover:text-primary-400 transition-colors text-sm">
