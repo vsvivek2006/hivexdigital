@@ -10,13 +10,17 @@ type Blog = {
 };
 
 export default function BlogList() {
-  if (!isLoggedIn()) return <Navigate to="/admin" replace />;
   const [blogs, setBlogs] = useState<Blog[]>([]);
+  const loggedIn = isLoggedIn();
 
   const load = () =>
     fetch('/api/blogs').then(res => res.json()).then(setBlogs);
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => {
+    if (loggedIn) load();
+  }, [loggedIn]);
+
+  if (!loggedIn) return <Navigate to="/admin" replace />;
 
   const handleDelete = async(id: string) => {
     await fetch(`/api/blogs/${id}`, { method: 'DELETE' });

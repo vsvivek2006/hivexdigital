@@ -28,9 +28,14 @@ export default function BlogDetail() {
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
       </Helmet>
-      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      {post.coverImage && <img src={post.coverImage} className="mb-4" alt="" />}
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <article className="max-w-3xl mx-auto prose">
+        <h1 className="mb-4">{post.title}</h1>
+        {post.coverImage && (
+          <img src={post.coverImage} className="mb-4 rounded" alt="" />
+        )}
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </article>
     </div>
   );
 }
+

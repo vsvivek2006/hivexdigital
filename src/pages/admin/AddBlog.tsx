@@ -6,13 +6,15 @@ import 'react-quill/dist/quill.snow.css';
 import slugify from 'slugify';
 
 export default function AddBlog() {
-  if (!isLoggedIn()) return <Navigate to="/admin" replace />;
   const [title, setTitle] = useState('');
   const [metaTitle, setMetaTitle] = useState('');
   const [metaDescription, setMetaDescription] = useState('');
   const [content, setContent] = useState('');
   const [coverImage, setCoverImage] = useState('');
   const navigate = useNavigate();
+  const loggedIn = isLoggedIn();
+
+  if (!loggedIn) return <Navigate to="/admin" replace />;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

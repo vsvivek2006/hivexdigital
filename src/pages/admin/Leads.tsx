@@ -14,12 +14,16 @@ type Lead = {
 };
 
 export default function Leads() {
-  if (!isLoggedIn()) return <Navigate to="/admin" replace />;
   const [leads, setLeads] = useState<Lead[]>([]);
+  const loggedIn = isLoggedIn();
 
   useEffect(() => {
-    fetch('/api/leads').then(res => res.json()).then(setLeads);
-  }, []);
+    if (loggedIn) {
+      fetch('/api/leads').then(res => res.json()).then(setLeads);
+    }
+  }, [loggedIn]);
+
+  if (!loggedIn) return <Navigate to="/admin" replace />;
 
   return (
     <div className="container py-16">

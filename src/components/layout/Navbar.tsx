@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { MenuIcon, X,  } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -151,9 +151,9 @@ const Navbar = () => {
               className={isScrolled ? 'text-gray-800' : 'text-white'} 
             />
           ) : (
-            <MenuIcon 
-              size={24} 
-              className={isScrolled ? 'text-gray-800' : 'text-white'} 
+            <Menu
+              size={24}
+              className={isScrolled ? 'text-gray-800' : 'text-white'}
             />
           )}
         </button>
