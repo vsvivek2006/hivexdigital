@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import Blog from './models/Blog.js';
 import Lead from './models/Lead.js';
+import Section from './models/Section.js';
 import slugify from 'slugify';
 
 dotenv.config();
@@ -79,6 +80,25 @@ app.post('/api/contact', async (req, res) => {
 app.get('/api/leads', async (req, res) => {
   const leads = await Lead.find().sort({ createdAt: -1 });
   res.json(leads);
+});
+
+// Section content endpoints
+app.get('/api/sections/:name', async (req, res) => {
+  let section = await Section.findOne({ name: req.params.name });
+  if (!section) {
+    section = new Section({ name: req.params.name, content: {} });
+    await section.save();
+  }
+  res.json(section.content);
+});
+
+app.put('/api/sections/:name', async (req, res) => {
+  const section = await Section.findOneAndUpdate(
+    { name: req.params.name },
+    { content: req.body, updatedAt: Date.now() },
+    { new: true, upsert: true }
+  );
+  res.json(section.content);
 });
 
 const port = process.env.PORT || 3001;

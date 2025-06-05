@@ -1,7 +1,27 @@
+import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Button from '../common/Button';
 
+interface HeroContent {
+  heading?: string;
+  subheading?: string;
+  ctaText?: string;
+  ctaUrl?: string;
+  image?: string;
+}
+
 const HeroSection = () => {
+  const [content, setContent] = useState<HeroContent | null>(null);
+
+  useEffect(() => {
+    fetch('/api/sections/hero')
+      .then(res => res.json())
+      .then(data => setContent(data))
+      .catch(() => setContent(null));
+  }, []);
+
+  if (!content) return null;
+
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 lg:pb-32 bg-gradient-blue overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
@@ -36,19 +56,19 @@ const HeroSection = () => {
       <div className="container relative z-20">
         <div className="max-w-3xl mx-auto text-center text-white">
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white animate-fade-in">
-            Elevate Your Brand with Hivix Digital Marketing
+            {content.heading}
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 mb-10 animate-slide-up">
-            Empowering your business with innovative, data-driven marketing strategies that deliver real growth.
+            {content.subheading}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="accent" 
-              size="lg" 
-              href="/contact"
+            <Button
+              variant="accent"
+              size="lg"
+              href={content.ctaUrl || '/'}
               className="group"
             >
-              Get Free Consultation
+              {content.ctaText}
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </Button>
             <Button 
