@@ -12,6 +12,7 @@ import Leads from './pages/admin/Leads';
 import BlogList from './pages/admin/BlogList';
 import AddBlog from './pages/admin/AddBlog';
 import EditBlog from './pages/admin/EditBlog';
+import EditHero from './pages/admin/EditHero';
 import AdminBlogEditor from './pages/AdminBlogEditor';
 import ScrollToTop from './components/common/ScrollToTop';
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="admin/add-blog" element={<AddBlog />} />
           <Route path="admin/edit-blog/:id" element={<EditBlog />} />
           <Route path="admin/blog-editor" element={<AdminBlogEditor />} />
+          <Route path="admin/hero" element={<EditHero />} />
           <Route path="admin/leads" element={<Leads />} />
         </Route>
       </Routes>
