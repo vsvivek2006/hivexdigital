@@ -27,6 +27,13 @@ export default function BlogDetail() {
       <Helmet>
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
+        <meta property="og:title" content={post.metaTitle} />
+        <meta property="og:description" content={post.metaDescription} />
+        {post.coverImage && (
+          <meta property="og:image" content={post.coverImage} />
+        )}
+        <meta property="og:url" content={`${window.location.origin}/blog/${slug}`} />
+        <meta property="og:type" content="article" />
       </Helmet>
       <article className="max-w-3xl mx-auto prose">
         <h1 className="mb-4">{post.title}</h1>
