@@ -47,12 +47,12 @@ const ContactForm = () => {
       });
 
       if (!response.ok) {
+        const text = await response.text();
         let message = 'Something went wrong';
         try {
-          const errorData = await response.json();
+          const errorData = JSON.parse(text);
           message = errorData.message || message;
         } catch {
-          const text = await response.text();
           if (text) message = text;
         }
         throw new Error(message);
