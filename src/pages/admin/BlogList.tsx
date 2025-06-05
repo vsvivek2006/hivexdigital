@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 type Blog = {
   _id: string;
   title: string;
+  slug: string;
+  createdAt: string;
 };
 
 export default function BlogList() {
@@ -27,10 +29,12 @@ export default function BlogList() {
       </div>
       <ul>
         {blogs.map(b => (
-          <li key={b._id} className="border-b py-2 flex justify-between">
-            <span>{b.title}</span>
-            <span>
-              <Link to={`/admin/edit-blog/${b._id}`} className="text-blue-600 mr-2">Edit</Link>
+          <li key={b._id} className="border-b py-2 grid grid-cols-1 md:grid-cols-4 gap-2 items-center">
+            <span className="font-medium">{b.title}</span>
+            <span className="text-sm break-all">{b.slug}</span>
+            <span className="text-sm">{new Date(b.createdAt).toLocaleDateString()}</span>
+            <span className="flex gap-2 justify-end">
+              <Link to={`/admin/edit-blog/${b._id}`} className="text-blue-600">Edit</Link>
               <button onClick={() => handleDelete(b._id)} className="text-red-600">Delete</button>
             </span>
           </li>

@@ -38,7 +38,7 @@ const ContactForm = () => {
     setError('');
 
     try {
-      const response = await fetch('https://boltprojectttttt.onrender.com/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
