@@ -46,7 +46,7 @@ export default function Leads() {
               <tr key={l._id} className="border-t">
                 <td className="p-2">{l.name}</td>
                 <td className="p-2 break-all">{l.email}</td>
-                <td className="p-2">{l.phone}</td>
+                <td className="p-2">{l.phone || 'N/A'}</td>
                 <td className="p-2">{l.service}</td>
                 <td className="p-2">{l.subject}</td>
                 <td className="p-2">{l.message}</td>

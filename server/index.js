@@ -72,7 +72,8 @@ app.delete('/api/blogs/:id', async (req, res) => {
 app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, phone, service, subject, message } = req.body;
-    const lead = new Lead({ name, email, phone, service, subject, message });
+    const sanitizedPhone = phone ? phone.toString().replace(/\D/g, '') : '';
+    const lead = new Lead({ name, email, phone: sanitizedPhone, service, subject, message });
     await lead.save();
     res.status(201).json(lead);
   } catch (err) {
