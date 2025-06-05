@@ -53,8 +53,9 @@ const ContactForm = () => {
 
       setIsSubmitted(true);
       setFormData(initialFormData);
-    } catch (err: any) {
-      setError(err.message || 'An unexpected error occurred');
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'An unexpected error occurred';
+      setError(message);
     } finally {
       setIsSubmitting(false);
       setTimeout(() => setIsSubmitted(false), 5000);
