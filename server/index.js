@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import Blog from './models/Blog.js';
+import Lead from './models/Lead.js';
+import slugify from 'slugify';
 
 dotenv.config();
 
@@ -15,8 +17,14 @@ mongoose.connect(mongoUri).then(() => console.log('MongoDB connected')).catch(er
 
 // REST API endpoints
 app.get('/api/blogs', async (req, res) => {
-  const blogs = await Blog.find().sort({createdAt: -1});
+  const blogs = await Blog.find().sort({ createdAt: -1 });
   res.json(blogs);
+});
+
+app.get('/api/blogs/slug/:slug', async (req, res) => {
+  const blog = await Blog.findOne({ slug: req.params.slug });
+  if (!blog) return res.status(404).json({ message: 'Blog not found' });
+  res.json(blog);
 });
 
 app.get('/api/blogs/:id', async (req, res) => {
@@ -30,19 +38,24 @@ app.get('/api/blogs/:id', async (req, res) => {
 });
 
 app.post('/api/blogs', async (req, res) => {
-  const {title, content, coverImage} = req.body;
-  const blog = new Blog({title, content, coverImage});
+  const { title, metaTitle, metaDescription, content, coverImage } = req.body;
+  const slug = slugify(title, { lower: true, strict: true });
+  const blog = new Blog({ title, metaTitle, metaDescription, slug, content, coverImage });
   await blog.save();
   res.status(201).json(blog);
 });
 
 app.put('/api/blogs/:id', async (req, res) => {
   try {
-    const blog = await Blog.findByIdAndUpdate(req.params.id, req.body, {new: true});
-    if (!blog) return res.status(404).json({message: 'Blog not found'});
+    const update = { ...req.body };
+    if (update.title) {
+      update.slug = slugify(update.title, { lower: true, strict: true });
+    }
+    const blog = await Blog.findByIdAndUpdate(req.params.id, update, { new: true });
+    if (!blog) return res.status(404).json({ message: 'Blog not found' });
     res.json(blog);
   } catch {
-    res.status(400).json({message: 'Invalid ID'});
+    res.status(400).json({ message: 'Invalid ID' });
   }
 });
 
@@ -54,6 +67,18 @@ app.delete('/api/blogs/:id', async (req, res) => {
   } catch {
     res.status(400).json({message: 'Invalid ID'});
   }
+});
+
+app.post('/api/contact', async (req, res) => {
+  const { name, email, message } = req.body;
+  const lead = new Lead({ name, email, message });
+  await lead.save();
+  res.status(201).json(lead);
+});
+
+app.get('/api/leads', async (req, res) => {
+  const leads = await Lead.find().sort({ createdAt: -1 });
+  res.json(leads);
 });
 
 const port = process.env.PORT || 3001;

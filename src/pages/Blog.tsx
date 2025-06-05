@@ -1,24 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BlogCard from '../components/blog/BlogCard';
 import SectionTitle from '../components/common/SectionTitle';
-import blogData from '../data/blogData';
 import { Search } from 'lucide-react';
 
-const Blog = () => {
+export type BlogPost = {
+  _id: string;
+  title: string;
+  slug: string;
+  metaDescription: string;
+  coverImage?: string;
+  createdAt: string;
+};
+type BlogProps = { initialPosts?: BlogPost[] };
+
+const Blog = ({ initialPosts }: BlogProps) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  
-  // Extract unique categories
-  const categories = ['All', ...Array.from(new Set(blogData.map(post => post.category)))];
-  
-  // Filter posts based on search term and category
-  const filteredPosts = blogData.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
+  const [posts, setPosts] = useState<BlogPost[]>(initialPosts || []);
+
+  useEffect(() => {
+    if (!initialPosts) {
+      fetch('/api/blogs').then(res => res.json()).then(setPosts);
+    }
+  }, [initialPosts]);
+
+  const filteredPosts = posts.filter(post =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.metaDescription.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   
   return (
     <div>
@@ -48,21 +56,6 @@ const Blog = () => {
                 </div>
               </div>
               
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category, index) => (
-                  <button
-                    key={index}
-                    className={`px-4 py-2 rounded-full transition-colors ${
-                      selectedCategory === category
-                        ? 'bg-primary-600 text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-100'
-                    }`}
-                    onClick={() => setSelectedCategory(category)}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
             </div>
           </div>
           
@@ -80,7 +73,7 @@ const Blog = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPosts.slice(1).map(post => (
-                  <BlogCard key={post.id} post={post} />
+                  <BlogCard key={post._id} post={post} />
                 ))}
               </div>
             </>
