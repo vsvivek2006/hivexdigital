@@ -11,6 +11,7 @@ import BlogDetail from './pages/BlogDetail';
 import BlogList from './pages/admin/BlogList';
 import AddBlog from './pages/admin/AddBlog';
 import EditBlog from './pages/admin/EditBlog';
+import AdminBlogEditor from './pages/AdminBlogEditor';
 import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="admin/blogs" element={<BlogList />} />
           <Route path="admin/add-blog" element={<AddBlog />} />
           <Route path="admin/edit-blog/:id" element={<EditBlog />} />
+          <Route path="admin/blog-editor" element={<AdminBlogEditor />} />
         </Route>
       </Routes>
     </>
