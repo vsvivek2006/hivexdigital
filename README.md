@@ -22,6 +22,8 @@ A simple WYSIWYG editor page is available at `/admin/blog-editor`. It renders th
 ## Dynamic sections
 
 The homepage hero content is now stored in MongoDB and can be edited at `/admin/hero`.
+Services displayed on the home page are editable via `/admin/services`.
+
 The API exposes generic endpoints:
 
 ```
