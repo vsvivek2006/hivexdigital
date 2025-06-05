@@ -31,8 +31,8 @@ const Navbar = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-md py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-white/90 backdrop-blur-md shadow-md py-3'
+          : 'bg-transparent backdrop-blur-md py-5'
       }`}
     >
       <div className="container flex justify-between items-center">
@@ -161,8 +161,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-white z-40 animate-slide-down">
-          <nav className="container flex flex-col py-8 space-y-6">
+        <div className="md:hidden fixed inset-0 top-16 bg-white z-40 overflow-y-auto text-center animate-slide-down">
+          <nav className="container flex flex-col items-center py-8 space-y-6">
             <NavLink 
               to="/"
               className={({ isActive }) => 
@@ -217,9 +217,9 @@ const Navbar = () => {
             >
               Blog
             </NavLink>
-            <Link 
+            <Link
               to="/contact"
-              className="btn btn-primary mt-4 w-full text-center"
+              className="btn btn-primary mt-4 w-3/4 mx-auto text-center"
               onClick={closeMenu}
             >
               Contact Us

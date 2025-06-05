@@ -70,10 +70,15 @@ app.delete('/api/blogs/:id', async (req, res) => {
 });
 
 app.post('/api/contact', async (req, res) => {
-  const { name, email, message } = req.body;
-  const lead = new Lead({ name, email, message });
-  await lead.save();
-  res.status(201).json(lead);
+  try {
+    const { name, email, phone, service, subject, message } = req.body;
+    const lead = new Lead({ name, email, phone, service, subject, message });
+    await lead.save();
+    res.status(201).json(lead);
+  } catch (err) {
+    console.error('Failed to save contact lead', err);
+    res.status(500).json({ message: 'Failed to save lead' });
+  }
 });
 
 app.get('/api/leads', async (req, res) => {

@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Navigate } from 'react-router-dom';
+import { isLoggedIn } from '../../utils/auth';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import slugify from 'slugify';
 
 export default function EditBlog() {
+  if (!isLoggedIn()) return <Navigate to="/admin" replace />;
   const { id } = useParams();
   const [title, setTitle] = useState('');
   const [metaTitle, setMetaTitle] = useState('');

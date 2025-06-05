@@ -1,14 +1,20 @@
 import { useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom';
+import { isLoggedIn } from '../../utils/auth';
 
 type Lead = {
   _id: string;
   name: string;
   email: string;
+  phone?: string;
+  service?: string;
+  subject?: string;
   message: string;
   createdAt: string;
 };
 
 export default function Leads() {
+  if (!isLoggedIn()) return <Navigate to="/admin" replace />;
   const [leads, setLeads] = useState<Lead[]>([]);
 
   useEffect(() => {
@@ -24,6 +30,9 @@ export default function Leads() {
             <tr className="bg-gray-100">
               <th className="p-2">Name</th>
               <th className="p-2">Email</th>
+              <th className="p-2">Phone</th>
+              <th className="p-2">Service</th>
+              <th className="p-2">Subject</th>
               <th className="p-2">Message</th>
               <th className="p-2">Date</th>
             </tr>
@@ -33,6 +42,9 @@ export default function Leads() {
               <tr key={l._id} className="border-t">
                 <td className="p-2">{l.name}</td>
                 <td className="p-2 break-all">{l.email}</td>
+                <td className="p-2">{l.phone}</td>
+                <td className="p-2">{l.service}</td>
+                <td className="p-2">{l.subject}</td>
                 <td className="p-2">{l.message}</td>
                 <td className="p-2">{new Date(l.createdAt).toLocaleDateString()}</td>
               </tr>

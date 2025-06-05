@@ -47,8 +47,15 @@ const ContactForm = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Something went wrong');
+        const text = await response.text();
+        let message = 'Something went wrong';
+        try {
+          const errorData = JSON.parse(text);
+          message = errorData.message || message;
+        } catch {
+          if (text) message = text;
+        }
+        throw new Error(message);
       }
 
       setIsSubmitted(true);
