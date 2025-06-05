@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
-import { 
-  Zap, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Facebook, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
   Twitter, 
   Instagram, 
   Linkedin 

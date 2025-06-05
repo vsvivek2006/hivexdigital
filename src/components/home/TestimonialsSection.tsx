@@ -93,7 +93,7 @@ const TestimonialsSection = () => {
                         ))}
                       </div>
                       <blockquote className="text-lg md:text-xl italic text-gray-700 mb-8">
-                        "{testimonial.content}"
+                        {testimonial.content}
                       </blockquote>
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
