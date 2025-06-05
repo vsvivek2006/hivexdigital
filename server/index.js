@@ -70,8 +70,8 @@ app.delete('/api/blogs/:id', async (req, res) => {
 });
 
 app.post('/api/contact', async (req, res) => {
-  const { name, email, message } = req.body;
-  const lead = new Lead({ name, email, message });
+  const { name, email, phone, service, subject, message } = req.body;
+  const lead = new Lead({ name, email, phone, service, subject, message });
   await lead.save();
   res.status(201).json(lead);
 });

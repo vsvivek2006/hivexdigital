@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Leads from './pages/admin/Leads';
+import AdminLogin from './pages/admin/Login';
 import BlogList from './pages/admin/BlogList';
 import AddBlog from './pages/admin/AddBlog';
 import EditBlog from './pages/admin/EditBlog';
@@ -29,6 +30,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:slug" element={<BlogDetail />} />
+          <Route path="admin" element={<AdminLogin />} />
           <Route path="admin/blogs" element={<BlogList />} />
           <Route path="admin/add-blog" element={<AddBlog />} />
           <Route path="admin/edit-blog/:id" element={<EditBlog />} />
