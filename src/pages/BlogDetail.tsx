@@ -27,10 +27,22 @@ export default function BlogDetail() {
       <Helmet>
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
+        <meta property="og:title" content={post.metaTitle} />
+        <meta property="og:description" content={post.metaDescription} />
+        {post.coverImage && (
+          <meta property="og:image" content={post.coverImage} />
+        )}
+        <meta property="og:url" content={`${window.location.origin}/blog/${slug}`} />
+        <meta property="og:type" content="article" />
       </Helmet>
-      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      {post.coverImage && <img src={post.coverImage} className="mb-4" alt="" />}
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <article className="max-w-3xl mx-auto prose">
+        <h1 className="mb-4">{post.title}</h1>
+        {post.coverImage && (
+          <img src={post.coverImage} className="mb-4 rounded" alt="" />
+        )}
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </article>
     </div>
   );
 }
+

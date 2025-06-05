@@ -6,7 +6,6 @@ import 'react-quill/dist/quill.snow.css';
 import slugify from 'slugify';
 
 export default function EditBlog() {
-  if (!isLoggedIn()) return <Navigate to="/admin" replace />;
   const { id } = useParams();
   const [title, setTitle] = useState('');
   const [metaTitle, setMetaTitle] = useState('');
@@ -14,8 +13,10 @@ export default function EditBlog() {
   const [content, setContent] = useState('');
   const [coverImage, setCoverImage] = useState('');
   const navigate = useNavigate();
+  const loggedIn = isLoggedIn();
 
   useEffect(() => {
+    if (!loggedIn) return;
     fetch(`/api/blogs/${id}`).then(res => res.json()).then(b => {
       setTitle(b.title);
       setMetaTitle(b.metaTitle || '');
@@ -23,7 +24,9 @@ export default function EditBlog() {
       setContent(b.content);
       setCoverImage(b.coverImage || '');
     });
-  }, [id]);
+  }, [id, loggedIn]);
+
+  if (!loggedIn) return <Navigate to="/admin" replace />;
 
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();

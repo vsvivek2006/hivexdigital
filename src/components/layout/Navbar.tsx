@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { MenuIcon, X,  } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +22,10 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }, [isOpen]);
 
   const closeMenu = () => {
     if (isOpen) setIsOpen(false);
@@ -151,9 +155,9 @@ const Navbar = () => {
               className={isScrolled ? 'text-gray-800' : 'text-white'} 
             />
           ) : (
-            <MenuIcon 
-              size={24} 
-              className={isScrolled ? 'text-gray-800' : 'text-white'} 
+            <Menu
+              size={24}
+              className={isScrolled ? 'text-gray-800' : 'text-white'}
             />
           )}
         </button>
@@ -161,7 +165,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-white z-40 overflow-y-auto text-center animate-slide-down">
+        <div className="md:hidden fixed inset-0 bg-white z-40 overflow-y-auto text-center pt-20 animate-slide-down">
           <nav className="container flex flex-col items-center py-8 space-y-6">
             <NavLink 
               to="/"

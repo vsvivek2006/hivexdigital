@@ -14,12 +14,16 @@ type Lead = {
 };
 
 export default function Leads() {
-  if (!isLoggedIn()) return <Navigate to="/admin" replace />;
   const [leads, setLeads] = useState<Lead[]>([]);
+  const loggedIn = isLoggedIn();
 
   useEffect(() => {
-    fetch('/api/leads').then(res => res.json()).then(setLeads);
-  }, []);
+    if (loggedIn) {
+      fetch('/api/leads').then(res => res.json()).then(setLeads);
+    }
+  }, [loggedIn]);
+
+  if (!loggedIn) return <Navigate to="/admin" replace />;
 
   return (
     <div className="container py-16">
@@ -42,7 +46,7 @@ export default function Leads() {
               <tr key={l._id} className="border-t">
                 <td className="p-2">{l.name}</td>
                 <td className="p-2 break-all">{l.email}</td>
-                <td className="p-2">{l.phone}</td>
+                <td className="p-2">{l.phone || 'N/A'}</td>
                 <td className="p-2">{l.service}</td>
                 <td className="p-2">{l.subject}</td>
                 <td className="p-2">{l.message}</td>

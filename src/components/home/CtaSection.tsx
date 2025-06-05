@@ -39,15 +39,25 @@ const CtaSection = () => {
           <p className="text-xl text-gray-100 mb-8">
             Connect with us today for a free consultation and see how our expert digital marketing strategies can drive your business forward.
           </p>
-          <Button 
-            variant="accent" 
-            size="lg" 
+          <Button
+            variant="accent"
+            size="lg"
             href="/contact"
             className="group"
           >
             Get Your Free Consultation
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
           </Button>
+          <div className="mt-4">
+            <Button
+              variant="outline"
+              size="lg"
+              href="/blog"
+              className="border-white text-white hover:bg-white/10"
+            >
+              Read Our Blog
+            </Button>
+          </div>
         </div>
       </div>
     </section>

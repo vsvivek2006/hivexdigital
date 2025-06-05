@@ -129,6 +129,8 @@ const ContactForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
+              inputMode="tel"
+              pattern="[0-9]{10,15}"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
               placeholder="(+91)9664480363"
             />
