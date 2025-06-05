@@ -8,13 +8,13 @@ export default function AdminLogin() {
   const navigate = useNavigate();
 
   if (isLoggedIn()) {
-    navigate('/admin/leads');
+    navigate('/admin/dashboard');
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (login(username, password)) {
-      navigate('/admin/leads');
+      navigate('/admin/dashboard');
     } else {
       alert('Invalid credentials');
     }
